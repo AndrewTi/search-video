@@ -7,7 +7,7 @@ export default class VideoListItem extends Component {
 
     render() {
         return (
-            <li>
+            <li onClick={() => { this.props.onVideoClick(this.props.video) } }>
                 <div>
                     <div> {console.log(this.props.video)}
                         <img src={this.props.video.snippet.thumbnails.default.url}/>

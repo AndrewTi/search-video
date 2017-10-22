@@ -13,7 +13,10 @@ export default class VideoList extends Component {
                 {this.props.videos.map(e => {
                     console.log(e);
                     return (
-                        <VideoListItem key={e.etag} video={e} />
+                        <VideoListItem
+                            onVideoClick={this.props.onVideoSelect}
+                            key={e.etag} 
+                            video={e} />
                     )
                 })}
             </ul>
